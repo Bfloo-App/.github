@@ -1,0 +1,87 @@
+name: Bug Report
+description: Internal report for bugs or unexpected behavior
+title: '[Bug] '
+labels: ['bug']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🐞 Internal Bug Report
+
+        Please provide details about the bug or unexpected behavior.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: 📝 Bug Summary
+      description: Briefly describe the bug or issue.
+      placeholder: |
+        Example:
+        - Project list does not load for some users
+        - API returns 500 error on login
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: 🛠️ Steps to Reproduce
+      description: List the steps to reproduce the bug.
+      placeholder: |
+        1. Go to Projects List
+        2. Click on "Load More"
+        3. Observe error message
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: ✅ Expected Behavior
+      description: What did you expect to happen?
+      placeholder: |
+        - Projects list should load additional items
+        - Login should succeed and redirect to dashboard
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: ❌ Actual Behavior
+      description: What actually happened?
+      placeholder: |
+        - Error message displayed
+        - API returns 500 error
+    validations:
+      required: true
+
+  - type: textarea
+    id: affected-areas
+    attributes:
+      label: 🗂️ Affected Areas/Components
+      description: Which areas or components are impacted?
+      placeholder: e.g., Projects List, API, Authentication, Mobile Views
+    validations:
+      required: false
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: 🖥️ Environment
+      description: Provide details about the environment where the bug occurred.
+      placeholder: |
+        - OS: macOS 14
+        - Browser: Chrome 120
+        - App version: 1.2.3
+        - Any relevant config or data
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: ℹ️ Additional Context
+      description: Any other information that would help with debugging.
+      placeholder: |
+        Related to internal feedback or requirements

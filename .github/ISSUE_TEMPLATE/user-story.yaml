@@ -1,0 +1,48 @@
+name: User Story
+description: Internal user story for new or improved functionality
+title: '[User Story] '
+labels: ['user story']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 📝 Internal User Story
+        Please describe the user story for the requested functionality or improvement.
+
+  - type: textarea
+    id: story
+    attributes:
+      label: 🧑‍💻 User Story
+      description: 'Write the user story in the format: As a [user type], I want [goal] so that [benefit].'
+      placeholder: 'Example: As a project manager, I want to archive projects so that I can keep my dashboard organized. As a new user, I want a clear onboarding flow so that I can start using the dashboard quickly.'
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: ✅ Acceptance Criteria
+      description: List the acceptance criteria for this user story.
+      placeholder: |
+        - User can archive/unarchive projects
+        - Archived projects are hidden from main list
+        - Onboarding flow is accessible and easy to follow
+    validations:
+      required: true
+
+  - type: textarea
+    id: affected-areas
+    attributes:
+      label: 🗂️ Affected Areas/Components
+      description: Which areas or components will be impacted?
+      placeholder: e.g., Projects List, Authentication, Mobile Views
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: ℹ️ Additional Context
+      description: Any other information that would help with the user story.
+      placeholder: |
+        Related to internal feedback or requirements

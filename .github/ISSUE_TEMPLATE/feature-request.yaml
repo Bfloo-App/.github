@@ -1,0 +1,79 @@
+name: Feature Request
+description: Internal request for new feature or enhancement
+title: '[Feature] '
+labels: ['feature', 'enhancement']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## ✨ Internal Feature Request
+        Please provide details about the new feature or enhancement.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: 📝 Feature Summary
+      description: Briefly describe the feature or enhancement.
+      placeholder: |
+        Example:
+        - Add project archiving functionality
+        - Improve dashboard search performance
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: 🚀 Motivation
+      description: Why is this feature needed? What problem does it solve?
+      placeholder: |
+        Example:
+        - Users need to archive old projects to reduce clutter
+        - Current search is slow for large datasets
+    validations:
+      required: true
+
+  - type: textarea
+    id: affected-areas
+    attributes:
+      label: 🗂️ Affected Areas/Pages
+      description: Which part of the dashboard will this feature impact?
+      placeholder: e.g., Projects List, Dashboard Home, API, Mobile Views
+    validations:
+      required: true
+
+  - type: textarea
+    id: requirements
+    attributes:
+      label: ✅ Requirements & Acceptance Criteria
+      description: List the requirements and acceptance criteria for this feature.
+      placeholder: |
+        - Users can archive/unarchive projects
+        - Archived projects are hidden from main list
+        - Search returns results in under 1 second
+    validations:
+      required: true
+
+  - type: textarea
+    id: constraints
+    attributes:
+      label: ⚙️ Design/Technical Constraints
+      description: Any design or technical constraints to consider.
+      placeholder: |
+        - Must work with existing SvelteKit architecture
+        - Should follow current UI patterns
+
+  - type: input
+    id: timeline
+    attributes:
+      label: ⏰ Preferred Timeline
+      description: When do you need this feature completed?
+      placeholder: 'e.g., Within 2 weeks, By end of sprint'
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: ℹ️ Additional Context
+      description: Any other information that would help with the feature request.
+      placeholder: |
+        Related to internal feedback or requirements

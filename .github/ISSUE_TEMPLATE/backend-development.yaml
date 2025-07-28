@@ -1,0 +1,79 @@
+name: Backend Development
+description: Internal request for new backend development tasks or improvements
+title: '[Backend] '
+labels: ['backend', 'development']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🛠️ Internal Backend Development
+        Please provide details about the required backend development work.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: 📝 Task Summary
+      description: Briefly describe the backend development task or improvement.
+      placeholder: |
+        Example:
+        - Implement new API endpoint for project archiving
+        - Optimize database queries for performance
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: 🚀 Motivation
+      description: Why is this development needed?
+      placeholder: |
+        Example:
+        - Support new business requirements
+        - Improve system reliability and performance
+    validations:
+      required: true
+
+  - type: textarea
+    id: affected-modules
+    attributes:
+      label: 🗂️ Affected Modules/Endpoints
+      description: Which modules or endpoints will be impacted?
+      placeholder: e.g., /api/projects, db/schema, auth
+    validations:
+      required: false
+
+  - type: textarea
+    id: requirements
+    attributes:
+      label: ✅ Requirements & Acceptance Criteria
+      description: List the requirements and acceptance criteria for this development task.
+      placeholder: |
+        - Endpoint returns correct data
+        - Query performance improved
+        - No breaking changes
+    validations:
+      required: true
+
+  - type: textarea
+    id: constraints
+    attributes:
+      label: ⚙️ Design/Technical Constraints
+      description: Any design or technical constraints to consider.
+      placeholder: |
+        - Must work with existing API structure
+        - Should follow current backend patterns
+
+  - type: input
+    id: timeline
+    attributes:
+      label: ⏰ Preferred Timeline
+      description: When do you need this development completed?
+      placeholder: 'e.g., Within 2 weeks, By end of sprint'
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: ℹ️ Additional Context
+      description: Any other information that would help with the development task.
+      placeholder: |
+        Related to internal feedback or requirements

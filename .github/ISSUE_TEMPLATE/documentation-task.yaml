@@ -1,0 +1,81 @@
+name: Documentation Task
+description: Create or update project documentation (PRDs, FSDs, READMEs, etc.)
+title: '[Docs] '
+labels: ['documentation']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 📄 Project Documentation Task
+
+        Use this template for tasks related to project docs (not code docs).
+
+  - type: dropdown
+    id: doc-type
+    attributes:
+      label: 📚 Document Type
+      description: What kind of document is this task about?
+      options:
+        - PRD (Product Requirements Document)
+        - FSD (Functional Specification Document)
+        - README
+        - Onboarding Guide
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: purpose
+    attributes:
+      label: 🎯 Purpose / Goal
+      description: What is the goal or purpose of this document?
+      placeholder: |
+        Example:
+        - Define requirements for new dashboard
+        - Update onboarding steps for new team members
+    validations:
+      required: true
+
+  - type: textarea
+    id: changes
+    attributes:
+      label: ✏️ Changes / Adjustments Needed
+      description: What needs to be created or changed?
+      placeholder: |
+        - Add section on API integration
+        - Revise user flow diagrams
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: ✅ Acceptance Criteria
+      description: What will indicate this documentation task is complete?
+      placeholder: |
+        - All sections filled out
+        - Reviewed by team
+    validations:
+      required: true
+
+  - type: textarea
+    id: related-resources
+    attributes:
+      label: 🔗 Related Resources / Links
+      description: Add any links or references that help with this task.
+      placeholder: |
+        - Link to previous PRD
+        - Reference to design mockups
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: ℹ️ Additional Context
+      description: Any other info that helps clarify the task.
+      placeholder: |
+        - Internal feedback
+        - Notes from last meeting
+    validations:
+      required: false

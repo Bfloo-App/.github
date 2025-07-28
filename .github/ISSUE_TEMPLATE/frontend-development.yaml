@@ -1,0 +1,79 @@
+name: Frontend Development
+description: Internal request for new frontend development tasks or improvements
+title: '[Frontend] '
+labels: ['frontend', 'development']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🎨 Internal Frontend Development
+        Please provide details about the required frontend development work.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: 📝 Task Summary
+      description: Briefly describe the frontend development task or improvement.
+      placeholder: |
+        Example:
+        - Implement new dashboard layout
+        - Add filtering to project list
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: 🚀 Motivation
+      description: Why is this development needed?
+      placeholder: |
+        Example:
+        - Improve user experience
+        - Support new business requirements
+    validations:
+      required: true
+
+  - type: textarea
+    id: affected-components
+    attributes:
+      label: 🗂️ Affected Components/Pages
+      description: Which components or pages will be impacted?
+      placeholder: e.g., Dashboard.svelte, ProjectList.svelte, Mobile Views
+    validations:
+      required: false
+
+  - type: textarea
+    id: requirements
+    attributes:
+      label: ✅ Requirements & Acceptance Criteria
+      description: List the requirements and acceptance criteria for this development task.
+      placeholder: |
+        - New layout matches design specs
+        - Filtering works for all project types
+        - No breaking changes
+    validations:
+      required: true
+
+  - type: textarea
+    id: constraints
+    attributes:
+      label: ⚙️ Design/Technical Constraints
+      description: Any design or technical constraints to consider.
+      placeholder: |
+        - Must work with existing SvelteKit architecture
+        - Should follow current UI patterns
+
+  - type: input
+    id: timeline
+    attributes:
+      label: ⏰ Preferred Timeline
+      description: When do you need this development completed?
+      placeholder: 'e.g., Within 2 weeks, By end of sprint'
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: ℹ️ Additional Context
+      description: Any other information that would help with the development task.
+      placeholder: |
+        Related to internal feedback or requirements

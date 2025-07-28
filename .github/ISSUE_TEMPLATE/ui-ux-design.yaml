@@ -1,0 +1,69 @@
+name: UI/UX Design Request
+description: Internal request for UI/UX design or improvements
+title: '[Design] '
+labels: ['design', 'ui/ux']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🎨 Internal UI/UX Design Request
+
+        Please provide details about your design needs for the dashboard.
+
+  - type: textarea
+    id: design-context
+    attributes:
+      label: 🎯 Design Context & Goals
+      description: Briefly describe what you want to design and why.
+      placeholder: |
+        Example:
+        - Goal: Improve onboarding experience for dashboard users
+        - Pain point: Current sign-up flow has high drop-off rate
+        - Success: Reduce drop-off
+    validations:
+      required: true
+
+  - type: textarea
+    id: affected-areas
+    attributes:
+      label: 🗂️ Affected Areas/Pages
+      description: Which part of the dashboard does this affect?
+      placeholder: e.g., Projects List, Authentication, Mobile Views
+    validations:
+      required: true
+
+  - type: textarea
+    id: desired-behavior
+    attributes:
+      label: ✅ Desired Behavior & Requirements
+      description: Describe the desired outcome and requirements.
+      placeholder: |
+        - Cards-based layout with status indicators
+        - Filtering and search capabilities
+        - Responsive design for mobile/tablet
+    validations:
+      required: true
+
+  - type: textarea
+    id: design-constraints
+    attributes:
+      label: ⚙️ Design Constraints & Considerations
+      description: Any technical or design constraints to consider.
+      placeholder: |
+        - Must work with existing SvelteKit architecture
+        - Should follow existing color scheme and typography
+
+  - type: input
+    id: timeline
+    attributes:
+      label: ⏰ Preferred Timeline
+      description: When do you need this design completed?
+      placeholder: 'e.g., Within 2 weeks, By end of sprint'
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: ℹ️ Additional Context
+      description: Any other information that would help with the design.
+      placeholder: |
+        Related to internal feedback or requirements
