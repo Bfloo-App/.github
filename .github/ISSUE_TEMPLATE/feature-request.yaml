@@ -1,7 +1,7 @@
 name: Feature Request
 description: Internal request for new feature or enhancement
 title: '[Feature] '
-labels: ['feature', 'enhancement']
+labels: ['enhancement']
 body:
   - type: markdown
     attributes:

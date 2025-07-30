@@ -1,0 +1,123 @@
+name: Project Chores
+description: Internal tasks for project maintenance, tooling, infrastructure, and development environment improvements
+title: '[Chores] '
+labels: ['chores', 'maintenance', 'internal']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🧹 Project Chores
+        For internal project maintenance tasks that don't directly impact external features but improve development experience, project structure, or infrastructure.
+
+  - type: dropdown
+    id: chore-type
+    attributes:
+      label: 🏷️ Chore Type
+      description: What type of project chore is this?
+      options:
+        - Dependency Updates
+        - Development Tooling
+        - Infrastructure Setup
+        - Code Organization/Refactoring
+        - CI/CD Improvements
+        - Documentation/README Updates
+        - Environment Configuration
+        - Performance Optimization
+        - Security Improvements
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: 📝 Task Summary
+      description: Briefly describe the chore or maintenance task.
+      placeholder: |
+        Example:
+        - Update all npm dependencies to latest versions
+        - Set up Redis for session management
+        - Configure Docker for development environment
+        - Add Kubernetes deployment manifests
+        - Reorganize project folder structure
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: 🎯 Motivation & Benefits
+      description: Why is this chore needed? What benefits will it provide?
+      placeholder: |
+        Example:
+        - Improve developer experience
+        - Enhance project maintainability
+        - Reduce technical debt
+        - Improve deployment efficiency
+        - Better code organization
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: 🔍 Scope & Components
+      description: What parts of the project will be affected?
+      placeholder: |
+        Example:
+        - package.json and package-lock.json
+        - Docker configuration files
+        - CI/CD pipeline scripts
+        - Project folder structure
+        - Development environment setup
+    validations:
+      required: false
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: ✅ Acceptance Criteria
+      description: List the specific criteria that define when this chore is complete.
+      placeholder: |
+        Example:
+        - All dependencies updated without breaking changes
+        - Redis successfully integrated and tested
+        - Docker containers build and run correctly
+        - Documentation updated to reflect changes
+        - No existing functionality broken
+    validations:
+      required: true
+
+  - type: textarea
+    id: considerations
+    attributes:
+      label: ⚠️ Technical Considerations
+      description: Any technical considerations, risks, or dependencies to be aware of.
+      placeholder: |
+        Example:
+        - May require environment variable updates
+        - Could affect existing deployment scripts
+        - Needs coordination with team for testing
+        - May require database migrations
+
+  - type: textarea
+    id: resources
+    attributes:
+      label: 📚 Helpful Resources
+      description: Any documentation, tutorials, or resources that would help with this task.
+      placeholder: |
+        Example:
+        - Link to migration guide
+        - Documentation for new tool/service
+        - Relevant blog posts or tutorials
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: ℹ️ Additional Context
+      description: Any other information relevant to this chore.
+      placeholder: |
+        Example:
+        - Related to technical debt identified during code review
+        - Preparation for upcoming feature development
+        - Response to security audit findings
