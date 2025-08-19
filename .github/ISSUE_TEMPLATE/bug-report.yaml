@@ -1,7 +1,7 @@
 name: Bug Report
 description: Internal report for bugs or unexpected behavior
-title: '[Bug] '
-labels: ['bug']
+title: "[Bug] "
+labels: ["to-fix"]
 body:
   - type: markdown
     attributes:

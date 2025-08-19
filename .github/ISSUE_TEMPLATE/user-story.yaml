@@ -1,7 +1,7 @@
 name: User Story
 description: Internal user story for new or improved functionality
-title: '[User Story] '
-labels: ['user story']
+title: "[User Story] "
+labels: ["user story"]
 body:
   - type: markdown
     attributes:
@@ -13,8 +13,8 @@ body:
     id: story
     attributes:
       label: 🧑‍💻 User Story
-      description: 'Write the user story in the format: As a [user type], I want [goal] so that [benefit].'
-      placeholder: 'Example: As a project manager, I want to archive projects so that I can keep my dashboard organized. As a new user, I want a clear onboarding flow so that I can start using the dashboard quickly.'
+      description: "Write the user story in the format: As a [user type], I want [goal] so that [benefit]."
+      placeholder: "Example: As a project manager, I want to archive projects so that I can keep my dashboard organized. As a new user, I want a clear onboarding flow so that I can start using the dashboard quickly."
     validations:
       required: true
 

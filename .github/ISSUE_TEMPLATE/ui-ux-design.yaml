@@ -1,7 +1,7 @@
 name: UI/UX Design Request
 description: Internal request for UI/UX design or improvements
-title: '[Design] '
-labels: ['design', 'ui/ux']
+title: "[Design] "
+labels: ["design", "ui/ux"]
 body:
   - type: markdown
     attributes:
@@ -58,7 +58,7 @@ body:
     attributes:
       label: ⏰ Preferred Timeline
       description: When do you need this design completed?
-      placeholder: 'e.g., Within 2 weeks, By end of sprint'
+      placeholder: "e.g., Within 2 weeks, By end of sprint"
 
   - type: textarea
     id: additional-context
