@@ -1,7 +1,7 @@
 name: Project Chores
 description: Internal tasks for project maintenance, tooling, infrastructure, and development environment improvements
-title: '[Chores] '
-labels: ['chores', 'maintenance', 'internal']
+title: "[Chores] "
+labels: ["chores", "maintenance", "internal"]
 body:
   - type: markdown
     attributes:

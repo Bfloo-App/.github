@@ -1,7 +1,7 @@
 name: Backend Development
 description: Internal request for new backend development tasks or improvements
-title: '[Backend] '
-labels: ['backend', 'development']
+title: "[Backend] "
+labels: ["backend", "development"]
 body:
   - type: markdown
     attributes:
@@ -68,7 +68,7 @@ body:
     attributes:
       label: ⏰ Preferred Timeline
       description: When do you need this development completed?
-      placeholder: 'e.g., Within 2 weeks, By end of sprint'
+      placeholder: "e.g., Within 2 weeks, By end of sprint"
 
   - type: textarea
     id: additional-context
