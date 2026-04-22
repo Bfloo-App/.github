@@ -33,15 +33,6 @@ body:
     validations:
       required: true
 
-  - type: input
-    id: target-release
-    attributes:
-      label: 🎯 Target Release (Optional)
-      description: 'Which major milestone or product launch does this belong to?'
-      placeholder: 'e.g., MVP App Launch, Q3 Authentication Overhaul'
-    validations:
-      required: false
-
   - type: textarea
     id: technical-notes
     attributes:
