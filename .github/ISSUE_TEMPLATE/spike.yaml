@@ -1,0 +1,69 @@
+name: '🔍 Spike (Research)'
+description: 'Time-boxed technical research, API investigation, or proof-of-concept'
+title: '[Spike]: '
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🔍 Technical Spike
+        **PM Reminder:** A Spike is an exploratory task used to reduce risk or figure out *how* to build something. It must have a strict time limit (Timebox) to prevent endless research.
+        *When the timebox expires, you must stop researching, document your findings, and create actionable `💻 Task` tickets.*
+
+  - type: textarea
+    id: objective
+    attributes:
+      label: 🎯 Research Objective
+      description: 'What exactly are we trying to figure out?'
+      placeholder: |
+        Example: Investigate if we should use Stripe Checkout vs. Stripe Elements for our billing flow.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: timebox
+    attributes:
+      label: ⏳ Strict Timebox
+      description: 'How much time are you allowing yourself to research this before you MUST make a decision?'
+      options:
+        - 2 Hours (Quick check)
+        - 4 Hours (Half day)
+        - 1 Day (Major architectural decision)
+        - 2 Days (Maximum allowed)
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: 🧠 Current Knowledge / Context
+      description: 'What do we already know, and why is this difficult?'
+      placeholder: |
+        - We know Stripe is the payment processor.
+        - Checkout is faster to implement but less customizable.
+        - Elements is highly customizable but requires more frontend state management.
+    validations:
+      required: true
+
+  - type: textarea
+    id: questions-to-answer
+    attributes:
+      label: ❓ Specific Questions to Answer
+      description: 'What exactly do you need to know to close this ticket?'
+      value: |
+        1. 
+        2. 
+        3.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-deliverable
+    attributes:
+      label: 📦 Expected Deliverable
+      description: 'What is the physical output of this research?'
+      placeholder: |
+        - [ ] A brief decision log written in the comments below.
+        - [ ] Creation of specific `💻 Task` tickets to execute the chosen path.
+        - [ ] (Optional) A throwaway Proof-of-Concept branch.
+    validations:
+      required: true

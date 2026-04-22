@@ -1,0 +1,55 @@
+name: '🏔️ Epic'
+description: 'Define a massive, multi-story initiative spanning multiple releases'
+title: '[Epic]: '
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🏔️ Epic
+        **PM Reminder:** An Epic is too large to complete in a single sprint. It is a container for multiple `👤 User Stories`. Do not code directly against an Epic.
+        *Note: Use GitHub's native "Create sub-issue" button in the right sidebar to link your User Stories to this Epic after submission.*
+
+  - type: textarea
+    id: objective
+    attributes:
+      label: 🎯 The Objective
+      description: 'What is the high-level goal of this massive initiative?'
+      placeholder: |
+        Example: Completely overhaul the authentication system to support OAuth2 (Google, GitHub) and eliminate password-based logins to increase sign-up conversion.
+    validations:
+      required: true
+
+  - type: textarea
+    id: business-value
+    attributes:
+      label: 💰 Business Value / ROI
+      description: 'Why are we spending weeks building this? What metric does it improve?'
+      placeholder: |
+        - Reduces user onboarding friction
+        - Increases security compliance
+        - Unlocks enterprise B2B sales
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: 🚧 Scope Boundaries
+      description: 'Define exactly what is IN scope and OUT of scope to prevent this from taking forever.'
+      value: |
+        **IN SCOPE:**
+        - 
+
+        **OUT OF SCOPE (Do not build this yet):**
+        -
+    validations:
+      required: true
+
+  - type: input
+    id: target-quarter
+    attributes:
+      label: 📅 Target Timeline
+      description: 'When do we expect to complete this entire Epic?'
+      placeholder: 'e.g., Q3 2026, MVP Launch Phase 2'
+    validations:
+      required: false

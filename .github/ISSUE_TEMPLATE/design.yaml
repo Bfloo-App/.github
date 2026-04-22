@@ -1,0 +1,69 @@
+name: '🎨 Design Request'
+description: 'Request UI/UX work, wireframes, Figma mockups, or user flow mapping'
+title: '[Design]: '
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🎨 UI/UX Design Task
+        **PM Reminder:** This ticket is for pure design work (Figma, wireframes, user flows). Do not use this ticket for writing CSS or frontend code. 
+        *Remember to link this to its parent `👤 User Story` using the sidebar!*
+
+  - type: dropdown
+    id: deliverable-type
+    attributes:
+      label: 📦 Expected Deliverable
+      description: 'What exactly needs to be created?'
+      options:
+        - Low-Fidelity Wireframe (Quick layout planning)
+        - High-Fidelity Mockup (Figma/UI polish)
+        - User Flow Diagram (Mapping the logic)
+        - Visual Asset (Iconography, logos, illustrations)
+        - Design System Update (Updating standard components)
+    validations:
+      required: true
+
+  - type: textarea
+    id: objective
+    attributes:
+      label: 🎯 Design Objective
+      description: 'What screen, component, or flow are we designing?'
+      placeholder: |
+        Example: Design the "Forgot Password" email template and the subsequent "Reset Password" web form.
+    validations:
+      required: true
+
+  - type: textarea
+    id: user-experience
+    attributes:
+      label: 🧠 User Experience (UX) Goals
+      description: 'How should the user feel, and what are the main usability constraints?'
+      placeholder: |
+        - Must be extremely clear and stress-free (users resetting passwords are usually frustrated).
+        - Must be fully mobile-responsive (60% of our resets happen on phones).
+        - Keep the form to exactly two fields: New Password and Confirm Password.
+    validations:
+      required: true
+
+  - type: textarea
+    id: inspiration
+    attributes:
+      label: 💡 Inspiration & References
+      description: 'Drop links to competitors, Dribbble concepts, or existing brand guidelines here.'
+      placeholder: |
+        - Competitor X does this really well: [Link]
+        - Follow our existing button styles defined in Figma here: [Link]
+    validations:
+      required: false
+
+  - type: textarea
+    id: definition-of-done
+    attributes:
+      label: ✅ Definition of Done
+      description: 'What needs to be attached or approved to close this design ticket?'
+      placeholder: |
+        - [ ] Figma mockup completed and linked in comments.
+        - [ ] Mobile, Tablet, and Desktop breakpoints designed.
+        - [ ] Handoff notes written for the development phase.
+    validations:
+      required: true

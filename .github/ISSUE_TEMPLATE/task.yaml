@@ -1,0 +1,71 @@
+name: '💻 Task'
+description: 'Core coding and implementation work (Frontend, Backend, Database, Infra)'
+title: '[Task]: '
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 💻 Development Task
+        **PM Reminder:** This is an execution ticket. It should take less than 2 days to complete. If it takes longer, it's too big and hiding risk—break it down further.
+        *Remember to use the sidebar to link this to its parent `👤 User Story`!*
+
+  - type: dropdown
+    id: technical-domain
+    attributes:
+      label: 🏗️ Technical Domain
+      description: 'What kind of brain-power does this require?'
+      options:
+        - API / Backend Logic
+        - UI / Frontend Implementation
+        - Database / Schema Migration
+        - DevOps / Infrastructure configuration
+        - Security / Auth
+    validations:
+      required: true
+
+  - type: textarea
+    id: objective
+    attributes:
+      label: 🎯 Task Objective
+      description: 'What exactly are we building in this specific repository?'
+      placeholder: |
+        Example: Write the POST /api/v1/auth/reset-password endpoint to handle the token generation and email dispatch logic.
+    validations:
+      required: true
+
+  - type: textarea
+    id: implementation-plan
+    attributes:
+      label: 🛠️ Implementation Plan / Architecture Notes
+      description: "Jot down your technical plan here so you don't forget it later. What libraries, functions, or files will you touch?"
+      placeholder: |
+        1. Create new route controller in `src/controllers/auth.ts`.
+        2. Use `crypto.randomBytes(32)` for the token.
+        3. Hash the token before storing it in PostgreSQL.
+        4. Trigger Resend API to fire the email.
+    validations:
+      required: true
+
+  - type: textarea
+    id: definition-of-done
+    attributes:
+      label: ✅ Definition of Done
+      description: 'What must be true before you can merge this Pull Request?'
+      placeholder: |
+        - [ ] Endpoint returns 200 OK on success.
+        - [ ] Endpoint returns 400 if email doesn't exist (but don't leak this to the client for security).
+        - [ ] Jest unit test written for the token generation.
+    validations:
+      required: true
+
+  - type: textarea
+    id: references
+    attributes:
+      label: 🔗 References & Dependencies
+      description: 'Links to API docs, StackOverflow, or the 🎨 Design ticket.'
+      placeholder: |
+        - Stripe API Docs: [Link]
+        - Figma Mockup: #42
+        - Blocked by database migration: #15
+    validations:
+      required: false
