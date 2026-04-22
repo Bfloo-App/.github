@@ -1,0 +1,76 @@
+name: '🐛 Bug Report'
+description: 'Report broken features, unhandled exceptions, or UI defects'
+title: '[Bug]: '
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🐛 Defect / Bug Report
+        **PM Reminder:** If this is a critical production bug, drop everything else and fix this first. 
+        *Remember to set the `Priority` field in the right sidebar immediately after creating this!*
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: 🚨 Bug Summary
+      description: 'A clear and concise description of what is broken.'
+      placeholder: |
+        Example: When a user clicks 'Reset Password' on the mobile view, the API returns a 500 Internal Server Error instead of sending the email.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: 🔥 Impact / Severity
+      description: 'How bad is this defect?'
+      options:
+        - Critical (Production is down / Data loss / Security breach)
+        - High (Core feature is broken, no workaround exists)
+        - Medium (Feature is broken, but a workaround exists)
+        - Low (Minor UI glitch / Typo / Annoyance)
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: 👣 Steps to Reproduce
+      description: 'Exact, step-by-step instructions to make the bug happen again.'
+      value: |
+        1. Go to '...'
+        2. Click on '...'
+        3. Scroll down to '...'
+        4. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-actual
+    attributes:
+      label: ⚖️ Expected vs. Actual Behavior
+      description: 'What did you think would happen, and what actually happened?'
+      value: |
+        **Expected:** **Actual:** validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: 🖥️ Environment / Context
+      description: 'Where did this happen? (Browser, OS, Device, or specific microservice environment)'
+      placeholder: |
+        - Repo: `api-gateway`
+        - Environment: Localhost / Docker / Production
+        - Browser: Chrome 120 (iOS Mobile View)
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: 🖨️ Logs, Errors, or Screenshots
+      description: 'Paste any terminal output, browser console errors, or drag-and-drop screenshots here.'
+      placeholder: 'Paste logs inside ```backticks``` to format them as code.'
+    validations:
+      required: false

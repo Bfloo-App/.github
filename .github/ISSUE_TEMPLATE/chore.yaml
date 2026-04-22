@@ -1,0 +1,66 @@
+name: '🧹 Chore'
+description: 'Internal project maintenance, CI/CD updates, dependencies, and tech debt'
+title: '[Chore]: '
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🧹 Maintenance Chore
+        **PM Reminder:** Chores don't change how the app behaves for the user; they change how the app behaves for *you*. Keep this tightly scoped.
+        *If this chore is blocking a specific task or feature, remember to link them!*
+
+  - type: dropdown
+    id: chore-type
+    attributes:
+      label: 🏷️ Chore Category
+      description: 'What type of maintenance are we doing?'
+      options:
+        - Dependency / Package Update
+        - CI/CD Pipeline Adjustment
+        - Code Refactoring / Tech Debt
+        - Dev Environment / Docker Update
+        - Linter / Code Formatter Rules
+    validations:
+      required: true
+
+  - type: textarea
+    id: objective
+    attributes:
+      label: 🎯 Chore Objective
+      description: 'What exactly are we maintaining or updating?'
+      placeholder: |
+        Example: Bump `pg` (PostgreSQL client) to v8.11 across all backend repositories and ensure tests still pass.
+    validations:
+      required: true
+
+  - type: textarea
+    id: developer-impact
+    attributes:
+      label: 📈 Developer Impact / ROI
+      description: 'Why is it worth spending time on this right now?'
+      placeholder: |
+        Example: The old version of `pg` has a known memory leak that crashes our local Docker containers if left running overnight.
+    validations:
+      required: true
+
+  - type: textarea
+    id: definition-of-done
+    attributes:
+      label: ✅ Definition of Done
+      description: 'What proves this chore is complete?'
+      placeholder: |
+        - [ ] Package `package.json` updated.
+        - [ ] `npm install` runs successfully.
+        - [ ] All automated tests pass in GitHub Actions.
+    validations:
+      required: true
+
+  - type: textarea
+    id: technical-notes
+    attributes:
+      label: 🛠️ Technical Notes / Commands
+      description: 'Any specific CLI commands, migration scripts, or gotchas to remember?'
+      placeholder: |
+        Run `npm run db:migrate:dry-run` first to double-check schema compatibility.
+    validations:
+      required: false

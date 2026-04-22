@@ -1,0 +1,70 @@
+name: '📝 Documentation Task'
+description: 'Write or update READMEs, architectural blueprints, API specs, or internal guides'
+title: '[Docs]: '
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 📝 Documentation Task
+        **PM Reminder:** Great documentation saves you hours of future debugging. If you just made a massive architectural change, write it down before you forget.
+        *Remember to link this to the `🏔️ Epic` or `💻 Task` that triggered it.*
+
+  - type: dropdown
+    id: doc-type
+    attributes:
+      label: 📚 Document Type
+      description: 'What kind of documentation are you writing?'
+      options:
+        - System Architecture / Blueprint
+        - API Specification (OpenAPI/Swagger)
+        - Repository README Update
+        - CI/CD & Infrastructure Guide
+        - Database Schema Dictionary
+    validations:
+      required: true
+
+  - type: textarea
+    id: objective
+    attributes:
+      label: 🎯 Documentation Objective
+      description: 'What exactly needs to be written or updated?'
+      placeholder: |
+        Example: Document the new OAuth2 flow and how to set up the local `.env` variables for Google and GitHub providers.
+    validations:
+      required: true
+
+  - type: textarea
+    id: target-audience
+    attributes:
+      label: 👥 Target Audience
+      description: 'Who are you writing this for?'
+      placeholder: |
+        - Future Me (6 months from now)
+        - New Developers (Onboarding)
+        - API Consumers
+    validations:
+      required: true
+
+  - type: textarea
+    id: outline
+    attributes:
+      label: 🗂️ Outline / Key Sections
+      description: 'What specific topics must this document cover?'
+      placeholder: |
+        - Prerequisites (API keys needed)
+        - Sequence diagram of the auth flow
+        - Troubleshooting common local errors
+    validations:
+      required: true
+
+  - type: textarea
+    id: definition-of-done
+    attributes:
+      label: ✅ Definition of Done
+      description: 'What proves this documentation is complete and accessible?'
+      placeholder: |
+        - [ ] Markdown file added to the central `/docs` folder.
+        - [ ] Linked from the main repository README.
+        - [ ] Read through once for clarity.
+    validations:
+      required: true
