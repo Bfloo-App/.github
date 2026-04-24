@@ -51,7 +51,11 @@ body:
       label: ⚖️ Expected vs. Actual Behavior
       description: 'What did you think would happen, and what actually happened?'
       value: |
-        **Expected:** **Actual:** validations:
+        **Expected:**
+
+        **Actual:**
+
+    validations:
       required: true
 
   - type: textarea
